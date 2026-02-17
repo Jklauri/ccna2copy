@@ -95,7 +95,7 @@ Int Range fa0/10-12
 
 
 !DHCP: DYNAMIC HOST CONFIGURATION PROTOCOL
-!!!DAPAT 21 UNDER SCORE ANG NA EDIT MO  ( LINE 72 to 99 PASTE TO COREBABA SWITCH )
+!!!DAPAT 21 UNDER SCORE ANG NA EDIT MO  ( LINE 100 to 126 PASTE TO COREBABA SWITCH )
 !@@@LEAF SWITCH
 config t
 ip dhcp Excluded-add 10.62.1.1 10.62.1.100
@@ -126,7 +126,7 @@ ip dhcp pool VOICEVLAN
    END
 
 !!CREATING AND PLACING PORTS INSIDEAVLAN:
-( LINE 103 to 141 PASTE TO COREBABA SWITCH )
+( LINE 130 to 168 PASTE TO COREBABA SWITCH )
 config t
 vlan 10
    name WIFIVLAN
@@ -167,7 +167,7 @@ Int Fa 0/7
  switchport access vlan 1
  end
 
-!IP CAMERAS NEED MAC ADDRESS RESERVATION FOR FIXED IP SECURITY.  (LINE 144 to 151 PASTE TO COREBABA)
+!IP CAMERAS NEED MAC ADDRESS RESERVATION FOR FIXED IP SECURITY.  (LINE 171 to 180 PASTE TO COREBABA)
 config t
 ip routing
 ip dhcp pool CAMERA6
@@ -178,6 +178,8 @@ host 10.62.50.8 255.255.255.0
 client-identifier 001a.070b.472e 
 end
 show ip dhcp binding
+
+!ping 10.62.50.6 and 10.62.50.8
 
 TASK2***TASK2***TASK2***
 TASK2***TASK2***TASK2***
@@ -262,18 +264,7 @@ Ephone 2
 end
 
 @@@Enabling Video Calls
-configure terminal
-ephone 1
-   video
-   voice service voip
-   h323
-   call start slow
-ephone 2
-   video
-   voice service voip
-   h323
-   call start slow
-end
+ 
 
 !!@@allow incoming calls
 configure terminal
@@ -672,6 +663,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
