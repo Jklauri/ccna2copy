@@ -331,13 +331,6 @@ interface e1/2
 
 Task3: Eigrp and Ospf Redistribution:
 R4: sikat: Eigrp and OSPF world:
-config T
-router eigrp 100
-redistribute ospf 1 metric 10000 100 255 1 1500
- exit
-router ospf 1
-redistribute eigrp 100 subnets
-end
 
 TASK9.3: BASIC eBGP FOR ISPS and R1.
 R1 BGP:
@@ -481,6 +474,7 @@ Howt to configure Site 2 site VPN JP to PH:
 https://
 
 TASK6: FUndamentals of Cisco network Security:
+
 
 
 
